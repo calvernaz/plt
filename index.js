@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const split  = require('split');
-var fixedQueue = require('fixedqueue').FixedQueue;
-var charm  = require('charm')();
-var babar  = require('babar');
+const Queue  = require('./queue');
+const charm  = require('charm')();
+const babar  = require('babar');
+
 
 var cli = require('optimist')
   .usage('Plot values from stdin.\nUsage: $0 -w [width] -h [height]')
@@ -20,8 +21,8 @@ var width = count * 3;
 var height = cli.argv.h;
 
 var first = true;
-var queue = fixedQueue(count);
-for (var i = 0; i < count; ++i) queue.push(0);
+var queue = new Queue(count);
+for (var i = 0; i < count; ++i) queue.enqueue(0);
 
 
 function enqueue(line) {
@@ -46,6 +47,7 @@ function plot() {
     height: height,
     yFractions: max > 10 ? 0 : 1
   });
+
   if (!first) charm.up(height + 2);
   first = false;
 	console.log('\n' + chart + '\n');
