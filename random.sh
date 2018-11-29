@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
 for i in {1..50}; do
-  echo $i $RANDOM ;
+  echo $RANDOM ;
   sleep 1;
 done
