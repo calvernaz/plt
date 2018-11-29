@@ -1,0 +1,25 @@
+{
+  "name": "plt",
+  "version": "1.0.0",
+  "description": "real-time plotting for the console",
+  "main": "index.js",
+  "bin": {
+    "plt": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "plot",
+    "real-time"
+  ],
+  "author": "Cesar Alvernaz",
+  "license": "MIT",
+  "dependencies": {
+    "babar": "^0.2.0",
+    "charm": "^1.0.2",
+    "fixedqueue": "0.0.1",
+    "optimist": "^0.6.1",
+    "split": "^1.0.1"
+  }
+}
