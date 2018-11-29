@@ -19,7 +19,7 @@ It will push new values from the right every time they arrive on stdin.
 Note: input values must be separated by a new line.
 
 ```bash
-./random.sh | plot
+./random.sh | plt
 ```
 
 ![Screenshot](https://github.com/calvernaz/plt/blob/master/plot.gif)
