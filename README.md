@@ -12,6 +12,7 @@ for i in {1..50}; do
   echo $RANDOM;
   sleep 1;
 done
+```
 
 You can pipe it to generate a chart right there in your terminal.
 It will push new values from the right every time they arrive on stdin.
