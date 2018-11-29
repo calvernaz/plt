@@ -4,15 +4,14 @@ const Queue = function(maxSize) {
 	this.maxSize = maxSize || Queue.MAX_SIZE;
 
 	this.reset = function() {
-		this.head = this.maxSize;
-		this.tail = 0;
+		this.head = -1;
+		this.tail = -1;
 	};
 
 	this.reset();
 
 	this.increment = function(number) {
-		let step = (number === 0) ? this.maxSize - 1: number - 1;
-		return ( step % this.maxSize );
+		return ( number + 1 ) % this.maxSize;
 	};
 };
 
@@ -31,7 +30,7 @@ Queue.prototype.enqueue = function(entry) {
 
 
 Queue.prototype.isEmpty = function() {
-	return this.tail === 0 && this.head === this.maxSize;
+	return this.tail === -1 && this.head === -1;
 };
 
 Queue.prototype.isFull = function() {
@@ -39,7 +38,7 @@ Queue.prototype.isFull = function() {
 };
 
 Queue.prototype.print = function() {
-	for(var i = this.head; i <= this.tail; i++){
+	for(let i = this.head; i <= this.tail; i++){
 		console.log(this.queue[i]);
 	}
 };
@@ -52,32 +51,34 @@ Queue.prototype.reduce = function(fn, acc) {
 	return this.queue.reduce(fn, acc);
 };
 
+Queue.prototype.clear = function () {
+	this.reset();
+	this.queue = [];
+};
+
+Queue.prototype.fill = function () {
+    for (let i = 0; i < this.maxSize; ++i) this.enqueue(0);
+};
+
+
 module.exports = Queue;
 
 
 // Usage:
-console.log(" ==== testing ====");
-let queue = new Queue(5);
+//console.log(" ==== testing ====");
+//let queue = new Queue(5);
 
-queue.enqueue(1);
-queue.enqueue(2);
+//queue.enqueue(1);
+//queue.enqueue(2);
 
-queue.print();
-
-//var data = queue.map(function(value, index) {
-//  return [index + 1, value];
-//});
-
-//var max = queue.reduce(function(acc, val) {
-//  return (val > acc) ? val : acc;
-//}, 0);
+//queue.print();
 
 
-queue.enqueue(5);
-queue.enqueue(6);
-queue.enqueue(7);
-queue.enqueue(8);
-queue.enqueue(9);
-queue.enqueue(10);
+//queue.enqueue(5);
+//queue.enqueue(6);
+//queue.enqueue(7);
+//queue.enqueue(8);
+//queue.enqueue(9);
+//queue.enqueue(10);
 
 //queue.print()
