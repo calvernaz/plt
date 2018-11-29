@@ -21,7 +21,7 @@ Note: input values must be separated by a new line.
 ./random.sh | plot
 ```
 
-![Screenshot](https://raw.github.com/calvernaz/plt/master/plot.gif)
+![Screenshot](https://github.com/calvernaz/plt/master/plot.gif)
 
 ## Arguments
 
