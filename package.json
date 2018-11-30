@@ -1,10 +1,10 @@
 {
-  "name": "plt",
+  "name": "cplt",
   "version": "1.0.0",
   "description": "real-time plotting for the console",
   "main": "index.js",
   "bin": {
-    "plt": "index.js"
+    "cplt": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
