@@ -19,12 +19,12 @@ It will push new values from the right every time they arrive on stdin.
 Note: input values must be separated by a new line.
 
 ```bash
-./random.sh | cplt
+./random.sh | plt
 ```
 
 ![Screenshot](https://github.com/calvernaz/plt/blob/master/plot.gif)
 
 ## Arguments
 
-- `cplt -w 100`: graph width (in terminal rows)
-- `cplt -h 10`: graph height (in terminal rows)
+- `plt -w 100`: graph width (in terminal rows)
+- `plt -h 10`: graph height (in terminal rows)

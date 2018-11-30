@@ -1,5 +1,5 @@
 {
-  "name": "cplt",
+  "name": "plt",
   "version": "1.0.0",
   "description": "real-time plotting for the console",
   "main": "index.js",
