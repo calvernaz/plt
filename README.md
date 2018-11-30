@@ -4,6 +4,11 @@ A simple tool to plot values from stdin into your terminal.
 This work is pretty much inspired in [cli-plot](https://github.com/Tabcorp/cli-plot), with
 slightly differences internally and visually.
 
+## Install
+
+```
+npm i @calvernaz/plt
+```
 
 ## How to use it
 
